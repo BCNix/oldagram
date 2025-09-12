@@ -1,0 +1,13 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* box-sizing reset */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+/* end box-sizing reset */
+
+
