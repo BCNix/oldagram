@@ -11,3 +11,97 @@ html {
 /* end box-sizing reset */
 
 
+body{
+  background-color: #EDEDED;
+  font-family: "Source Sans 3", sans-serif;
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.container{
+  background-color: white;
+  width: 670px;
+  margin: 0 auto;
+}
+
+img{
+  width: 100%;
+}
+
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 25px 18px 18px;
+  border-bottom: 2px solid #C6C6C6;
+  height: px;
+}
+
+.brand-icon{
+  width: 180px;
+}
+
+.profile-img{
+  width: 60px;
+  border-radius: 50%;
+}
+
+.post-section{
+  border-bottom: 40px solid #EDEDED;
+}
+
+.interaction-icons{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.interaction-icons img{
+  width: 35px;
+}
+
+.bold{
+  font-weight: 700;
+}
+
+.user-comment{
+  font-weight: 400;
+}
+
+.post-section{
+  padding: 20px 0 ;
+}
+
+.post-section-user-info{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 0 30px 18px;
+
+}
+
+
+.post-section p{
+  margin: 0;
+}
+
+/* .img{
+  width: 65px;
+}
+
+.img img{
+  border-radius: 50%;
+  width: 100%;
+}
+
+.first-div{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+
+.first-div p{
+  margin: 0;
+}
+ */

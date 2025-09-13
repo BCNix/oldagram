@@ -4,9 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;700&display=swap" rel="stylesheet">
     <title>Oldagram</title>
 </head>
 <body>
+
+    <div class="container">
+        <header>
+            <img class="brand-icon" src="./images/logo.png" alt="Oldagram brand icon.">
+            <img class="profile-img" src="./images/biely-portrait.jpeg" alt="Biely portrait.">
+        </header>
+
+        <main>
+            <div class="post-section">
+                <div class="post-section-user-info">
+                    <img class="profile-img" src="./images/avatar-vangogh.jpg" alt="Vincent van Gogh portrait.">
+                    <div class="user-info">
+                        <p id="name" class="bold">Vincent van Gogh</p>
+                        <p id="location">Zudert, Netherlands</p>
+                    </div>
+                </div>
+                <img src="./images/post-vangogh.jpg" alt="Vincent van Gogh painting titled 'Self-portrait'.">
+                <div class="interaction-icons">
+                        <img src="./images/icon-heart.png" alt="Heart icon.">
+                        <img src="./images/icon-comment.png" alt="Comment icon.">
+                        <img src="./images/icon-dm.png" alt="Direct message icon.">
+                </div>
+                <p id="likes" class="bold">21,492 likes</p>
+                <p><span id="username" class="bold">vincey1853</span> <span id="comment" class="user-comment">just took a few mushrooms lol</span></p>
+            </div>
+
+        </main>
+
+        <footer>&copy 2025 Oldagram</footer>
+    </div>
+    
     
 
     <script src="./script.js"></script>
