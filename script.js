@@ -61,7 +61,7 @@ for(let post of posts){
                 <p class="padding-left padding-bottom bold">${post.likes} likes</p>
                 <p class="user-comment padding-left"><span class="bold">${post.username}</span> ${post.comment}</p>
             </div>
-            
+
             `
 }
 
