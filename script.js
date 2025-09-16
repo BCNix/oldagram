@@ -29,41 +29,55 @@ const posts = [
 ]
 
 
-
-// Double clicking the posted image increment the like to 1
-// Clicking the heart image increment the like counter to 1
-
-
-// Render each user post from the post const variable
-// Each post must have the correct details (name, username, location avatar, post, comments and likes)
-
 const mainHtml = document.querySelector("main")
 
 let postBlock = ""
 
-for(let post of posts){
+for(let i = 0; i < posts.length; i++){
     postBlock += `
-
             <div class="post-section">
                 <div class="post-section-user-info">
-                    <img class="profile-img" src="${post.avatar}" alt="${post.name} portrait.">
+                    <img class="profile-img" src="${posts[i].avatar}" alt="${posts[i].name} portrait.">
                     <div class="user-info">
-                        <p class="bold">${post.name}</p>
-                        <p>${post.location}</p>
+                        <p class="bold">${posts[i].name}</p>
+                        <p>${posts[i].location}</p>
                     </div>
                 </div>
-                <img class="img-post" src="${post.post}" alt="${post.name} painting.">
+                <img class="img-post" src="${posts[i].post}" alt="${posts[i].name} painting.">
                 <div class="interaction-icons">
                     <img class="heart-icon" src="./images/icon-heart.png" alt="Heart icon.">
                     <img src="./images/icon-comment.png" alt="Comment icon.">
                     <img src="./images/icon-dm.png" alt="Direct message icon.">
                 </div>
-                <p class="padding-left padding-bottom bold">${post.likes} likes</p>
-                <p class="user-comment padding-left"><span class="bold">${post.username}</span> ${post.comment}</p>
+                <p class="padding-left padding-bottom bold likes">${posts[i].likes} likes</p>
+                <p class="user-comment padding-left"><span class="bold">${posts[i].username}</span> ${posts[i].comment}</p>
             </div>
-
             `
 }
 
 mainHtml.innerHTML += postBlock
 
+const imgPosts = document.querySelectorAll(".img-post")
+
+for(let i = 0; i < imgPosts.length; i++){
+    imgPosts[i].addEventListener("dblclick", function(){
+    posts[i].likes++
+    updateLikes(i)
+})
+}
+
+
+const heartIcons = document.querySelectorAll(".heart-icon")
+
+for(let i = 0; i < heartIcons.length; i++){
+    heartIcons[i].addEventListener("click", function(){
+    posts[i].likes++
+    updateLikes(i)
+})
+}
+
+
+function updateLikes(index){
+    const likesEl = document.querySelectorAll(".likes")
+    likesEl[index].textContent = `${posts[index].likes} likes`
+}
